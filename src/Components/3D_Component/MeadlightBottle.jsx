@@ -10,7 +10,7 @@ export default function MeadlightBottle(props) {
 
     gsap.to(rotateGSAP.current.rotation , 
       {
-        y:20,
+        y:-20,
         duration:400,
         scrollTrigger:{
           trigger: '.App',
@@ -24,9 +24,9 @@ export default function MeadlightBottle(props) {
   useEffect(() => {
     gsap.from(rotateGSAP.current.rotation , 
       {
-        y:5,
-        duration:0.8,
-        delay:1.2,
+        y:-9,
+        duration:3.5,
+        // delay:1.2,
         
       }
     );

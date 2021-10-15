@@ -1,9 +1,10 @@
 .canvas{
+    display: none;
     position: fixed;
-    height: 90%;
-    width: 90%;
-    margin-left: 65%;
-    /* top: -20px; */
+    height: 95%;
+    width: 95%;
+    margin-left: 55%;
+    top: 60px;
 }
 
 .pTest{

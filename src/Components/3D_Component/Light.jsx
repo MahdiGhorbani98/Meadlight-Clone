@@ -3,9 +3,11 @@ import React from 'react'
 export default function Light() {
     return (
         <>
-            <ambientLight intensity={1}/>
+            <ambientLight
+             color={'#ff91a3'} 
+             intensity={1}/>
             <directionalLight 
-            position={[10,0,-10]}
+            position={[-5,15,-10]}
             intensity={0.4}
             />
             <directionalLight 
@@ -14,7 +16,7 @@ export default function Light() {
             />
             <directionalLight 
             intensity={0.4}
-            position={[-10,0,-10]}  
+            position={[-10,-15,-10]}  
             />
 
         </>
