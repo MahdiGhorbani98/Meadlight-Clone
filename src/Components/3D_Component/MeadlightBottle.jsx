@@ -5,10 +5,10 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 export default function MeadlightBottle(props) {
   gsap.registerPlugin(ScrollTrigger)
-
+  let tl = gsap.timeline();
   useEffect(() => {
 
-    gsap.to(rotateGSAP.current.rotation , 
+  gsap.to(rotateGSAP.current.rotation , 
       {
         y:-20,
         duration:400,
@@ -20,7 +20,56 @@ export default function MeadlightBottle(props) {
         }
       }
     );
+  
+  tl.fromTo('.canvas' , 
+      {
+        x:0,
+        scrollTrigger:{
+          trigger: '.roseS3',
+          start: "+=0",
+          end:"+=800", // when the top of the trigger hits the top of the viewport
+          // markers:true,
+          scrub:1
+        }
+      },
+      {
+        x:-900,
+        scrollTrigger:{
+          trigger: '.roseS3',
+          end:"+=800", // when the top of the trigger hits the top of the viewport
+
+          // start: "bottom top", // when the top of the trigger hits the top of the viewport
+          scrub:1,
+        },
+        duration:3
+      }
+    )
+  .fromTo('.canvas' , 
+      {
+        x:-900,
+        scrollTrigger:{
+          trigger: '.fakrLorem',
+          start: "+=800",
+          // end:"+=800", // when the top of the trigger hits the top of the viewport
+          // markers:true,
+          scrub:1
+        }
+      },
+      {
+        x:0,
+        scrollTrigger:{
+          trigger: '.fakrLorem',
+          // end:"+=800", // when the top of the trigger hits the top of the viewport
+
+          // start: "bottom top", // when the top of the trigger hits the top of the viewport
+          scrub:1,
+        },
+        duration:3
+      }
+    );
   },[])
+
+
   useEffect(() => {
     gsap.from(rotateGSAP.current.rotation , 
       {

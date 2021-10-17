@@ -4,6 +4,7 @@
 @import url('http://fonts.cdnfonts.com/css/candela');
 @import url('./Section1_Intro.css');
 @import url('./Section2_PinkDrink.css');
+@import url('./Section3_History.css');
 
 *{
   box-sizing: border-box;

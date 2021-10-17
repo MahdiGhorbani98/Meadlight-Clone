@@ -26,9 +26,7 @@ export default function Section2_PinkDrink() {
         <p className="pCaption__s2">thanks to its light/mild carbonation.</p>
         </div>
     )
-    let pArticle1_1 = useRef(
 
-    )
     let pArticle2 = useRef(
         <div id="pa2">
         <p className="pBold__s2">
@@ -47,6 +45,7 @@ export default function Section2_PinkDrink() {
                     
         </div>
     )
+
     let pArticle3 = useRef(
         <div id="pa3">
             <p className="pBold__s2">We only use<br/>
@@ -64,6 +63,7 @@ export default function Section2_PinkDrink() {
             <p className="pCaption__s2">This way, the properties and color of each one instantly recalls our drink.</p>
         </div>
     )
+
     gsap.registerPlugin(ScrollTrigger)
     let tl_BtnI = gsap.timeline({paused:true})
     let tl_BtnII = gsap.timeline({paused:true})
@@ -85,93 +85,6 @@ export default function Section2_PinkDrink() {
         if(!document.querySelector('.btnIII').classList.contains('clicked'))
         tl.reverse();
     }
-
-    // function ChangeArticle(I){
-    //     //////////////* logical codes *///////////////////
-    //     let toRemoveArticle = ""
-    //     let toRemove_toRight_Article_byDot = ""
-    //     let toRemove_toRight_Article = ""
-    //     let toAdd_toRight_Article = ""
-    //     // let toRemoveArticle = ""
-    //     if(document.querySelector('.article2') && document.querySelector('.article2').classList.contains("toRight") && I==="II" )
-    //     {
-    //         if(document.querySelector('.article1')){
-    //             toRemoveArticle=".article1";
-    //             toRemove_toRight_Article_byDot=".article2"
-    //             toRemove_toRight_Article="article2"
-    //             toAdd_toRight_Article = ".article3"
-    //             gsap.set(toAdd_toRight_Article,{top:-222})
-    //         }
-    //         // else{
-    //         //     toRemoveArticle=".article1";
-    //         //     toRemove_toRight_Article_byDot=".article2"
-    //         //     toRemove_toRight_Article="article2"
-    //         //     toAdd_toRight_Article = ".article3"
-    //         //     gsap.set(toAdd_toRight_Article,{top:-222})
-    //         // }
-            
-
-
-    //     }
-    //     else if(document.querySelector('.article3') && document.querySelector('.article3').classList.contains("toRight") && I==="III" )
-    //     {
-    //         toRemoveArticle=".article2";
-    //         toRemove_toRight_Article_byDot=".article3"
-    //         toRemove_toRight_Article="article3"
-    //         toAdd_toRight_Article = ".article1"
-    //         gsap.set(toAdd_toRight_Article,{top:-20})
-    //     }
-
-    //     let tl_II = gsap.timeline();
-    //     tl_II.to(toRemoveArticle, {
-    //         // rotateX:-50,
-    //         // rotateY:-50,
-    //         y:20,
-    //         opacity:0,
-    //         duration:0.3,   
-    //     })
-    //     tl_II.set(toRemoveArticle, {
-    //         display:'none'
-    //     })
-    //     tl_II.set('.toRight',{className:`-=${toRemove_toRight_Article}`})
-    //     tl_II.from(toRemove_toRight_Article_byDot,
-    //     {
-    //         rotateX:-50,
-    //         rotateY:-50,
-    //         opacity:0,
-    //         x:30,
-    //         height:207,
-    //         duration:0.8
-    //     })
-    //     tl_II.fromTo(toAdd_toRight_Article,
-    //     {
-    //         display:'none',
-    //         rotateX:-50,
-    //         rotateY:-50,
-    //         opacity:0,
-    //         x:30,
-
-    //     }
-    //     ,
-    //     {
-    //         display:'block',
-    //         x:0,
-    //         rotateX:0,
-    //         rotateY:0,
-    //         opacity:1,
-    //         duration:0.8
-
-    //     }
-    //     ,"-=0.8")
-    //     tl_II.from('.linePink_pBold',
-    //     {
-
-    //         strokeDashoffset:650,
-    //         duration:0.8,
-    //         ease: Power2.easeIn
-    //     },'-=0.3')
-    //     document.querySelector(toAdd_toRight_Article).classList.add("toRight");
-    // }
 
     function ChangeArticleText(article1_to_none ,article2_to_none,article3_to_none,article4_to_none,article1_to_block,article2_to_block  ){
         let tl_II = gsap.timeline();
@@ -356,7 +269,7 @@ export default function Section2_PinkDrink() {
             scrollTrigger:{
                 trigger:".Section2_PinkDrink_Container",
                 start: "+=870",
-                markers:true,
+                markers:false,
             },
         })
     useEffect(() => {
@@ -385,6 +298,12 @@ export default function Section2_PinkDrink() {
             opacity:0,
             duration:0.4
         },"-=0.2")
+        tl_01.from('.hand00',
+        {
+            y:40,
+            opacity:0,
+            duration:0.4
+        },"-=0.4")
         tl_01.from('.svg__01',
         {
             strokeDashoffset:355.611,
@@ -406,7 +325,7 @@ export default function Section2_PinkDrink() {
             scrollTrigger:{
                 trigger:".Section2_PinkDrink_Container",
                 start: "-=400",
-                markers:true,
+                markers:false,
             },
             strokeDashoffset:330,
             duration:0.5
@@ -440,86 +359,7 @@ export default function Section2_PinkDrink() {
         },'-=0.3')
 
     })
-    // useEffect(() => {
-    //     gsap.from('.rose',
-    //     {
-    //         scrollTrigger:{
-    //             trigger:'.rose',
-    //             start: "-=210px",
-    //         },
-    //         opacity:0,
-    //         y:20,
-    //         duration:0.5
-    //     }
-    //     )
-    //     gsap.from('.zeroS2',
-    //     {
-    //         scrollTrigger:{
-    //             trigger:'.zeroS2',
-    //             start: "-=250px top",
-    //         },
-            
-    //         opacity:0,
-    //         duration:0.3
-    //     }
-    //     )
-    //     gsap.from('.oneS2',
-    //     {
-    //         scrollTrigger:{
-    //             trigger:'.zeroS2',
-    //             // start: "top top", // when the top of the trigger hits the top of the viewport
 
-    //             start: "-=350px top",
-    //             markers:true
-    //         },
-            
-    //         opacity:0,
-    //         duration:0.3
-    //     }
-    //     )
-    // })
-
-
-    // let pArticle1=
-    // <>
-    //     <p className="pBold__s2">You drink it in <br/>
-    //     <bdi className="bdiSec2">
-    //     <>low tumblers with your <br/></>
-    //     <SvgImport 
-    //     svg={
-    //         <svg viewBox="0 0 135 10" style={{position: 'absolute', width: 220, bottom: 43, left: 0}}>
-    //         <path className="linePink_pBold" fill="none" stroke="#ff91a3" strokeLinecap="round" strokeLinejoin="round" strokeWidth="5" vectorEffect="non-scaling-stroke" d="M3.1 4.5c42.5-5.4 86.3 6.1 128.9.9" style={{strokeDashoffset:  0, strokeDasharray: 645.611}}></path>
-    //         </svg>
-    //     }
-    //     />
-    //     </bdi>
-    //     friends</p>
-
-    //     <p className="pCaption__s2">thanks to its light/mild carbonation.</p>
-    // </>
-
-    // let pArticle2=
-    // <>
-    //     <p className="pBold__s2">
-    //         <bdi className="bdiSec2">
-    //         <>We blend six honeys together</>
-    //         <SvgImport 
-    //         svg={
-    //             <svg viewBox="0 0 135 10" style={{position: 'absolute', width: 175, bottom: -10, left: 160}}>
-    //             <path className="linePink_pBold" fill="none" stroke="#ff91a3" strokeLinecap="round" strokeLinejoin="round" strokeWidth="5" vectorEffect="non-scaling-stroke" d="M3.1 4.5c42.5-5.4 86.3 6.1 128.9.9" style={{strokeDashoffset:  0, strokeDasharray: 645.611}}></path>
-    //             </svg>
-    //         }
-    //         />
-    //         </bdi>
-    //     </p>
-    //     <p className="pCaption__s2">In different quantities, according to a principle that develops unique tastes and aromas, as well as light alcohol contents.</p>
-                    
-    // </>
-
-    // let pArticle3=
-    // <>
-
-    // </>
     return (
         <div className="Section2_PinkDrink_Container">
             <div className="Section2_PinkDrink">

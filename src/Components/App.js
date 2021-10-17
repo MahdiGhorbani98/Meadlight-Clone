@@ -1,6 +1,7 @@
 import '../Css/App.css';
 import Section1_Intro from './Sections/Section1_Intro';
 import Section2_PinkDrink from './Sections/Section2_PinkDrink';
+import Section3_History from './Sections/Section3_History';
 import FakeLorem from './FakeContent/FakeLorem';
 import CanvasController from './3D_Component/CanvasController'
 import React, { useRef,useEffect } from 'react'
@@ -63,7 +64,8 @@ function App() {
       <img src={plus} alt="plus" className="plus" />
       {/* <CanvasController/> */}
       <Section1_Intro/> 
-      <Section2_PinkDrink/> 
+      <Section2_PinkDrink/>
+      <Section3_History/> 
       <div className="div__spinner">
         <Spinner width={100} className="spinner"/>
         <img src={p} alt="" className="p_in_spinner" />
