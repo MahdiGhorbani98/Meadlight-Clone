@@ -44,29 +44,29 @@ export default function MeadlightBottle(props) {
         duration:3
       }
     )
-  .fromTo('.canvas' , 
-      {
-        x:-900,
-        scrollTrigger:{
-          trigger: '.fakrLorem',
-          start: "+=800",
-          // end:"+=800", // when the top of the trigger hits the top of the viewport
-          // markers:true,
-          scrub:1
-        }
-      },
-      {
-        x:0,
-        scrollTrigger:{
-          trigger: '.fakrLorem',
-          // end:"+=800", // when the top of the trigger hits the top of the viewport
+  // .fromTo('.canvas' , 
+  //     {
+  //       x:-900,
+  //       scrollTrigger:{
+  //         trigger: '.fakrLorem',
+  //         start: "+=800",
+  //         // end:"+=800", // when the top of the trigger hits the top of the viewport
+  //         // markers:true,
+  //         scrub:1
+  //       }
+  //     },
+  //     {
+  //       x:0,
+  //       scrollTrigger:{
+  //         trigger: '.fakrLorem',
+  //         // end:"+=800", // when the top of the trigger hits the top of the viewport
 
-          // start: "bottom top", // when the top of the trigger hits the top of the viewport
-          scrub:1,
-        },
-        duration:3
-      }
-    );
+  //         // start: "bottom top", // when the top of the trigger hits the top of the viewport
+  //         scrub:1,
+  //       },
+  //       duration:3
+  //     }
+  //   );
   },[])
 
 

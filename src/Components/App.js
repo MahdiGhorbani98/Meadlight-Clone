@@ -11,6 +11,8 @@ import { Power2 , Elastic } from 'gsap/all';
 import plus from '../Assets/images/Plus.png'
 import p from '../Assets/images/P.png'
 import {ReactComponent as Spinner} from '../Assets/vectors/spinner.svg'
+import Section5_Contacts from './Sections/Section5_Contacts';
+import Section4_Cocktails from './Sections/Section4_Cocktails';
 
 function App() {
   gsap.registerPlugin(ScrollTrigger)
@@ -40,7 +42,19 @@ function App() {
     tl.from('.scroll__to__discover',{y:30,opacity:0, duration:0.5},'-=1.2')
     tl.set('.canvas',{display:'block',duration:0.1})
     tl.from('.canvas',{y:740 , x :150, duration:3.5,ease:Elastic.easeOut.config(1.01, 0.75)} )
-
+    
+    gsap.to('.div__scroll_to_dicover',
+    {
+      opacity:0.0,
+      // x:110,
+      scrollTrigger:{
+        trigger: '.App',
+        start: "+=50", // when the top of the trigger hits the top of the viewport
+        end: "+=60",
+        scrub:1,
+        markers:false
+      }
+    })
   },[])
   
   /////////////////////////OnHover Run GSAP//////////////////////
@@ -66,6 +80,8 @@ function App() {
       <Section1_Intro/> 
       <Section2_PinkDrink/>
       <Section3_History/> 
+      <Section4_Cocktails/>
+      {/* <Section5_Contacts/> */}
       <div className="div__spinner">
         <Spinner width={100} className="spinner"/>
         <img src={p} alt="" className="p_in_spinner" />
@@ -77,7 +93,6 @@ function App() {
         <FakeLorem clss={"fake2"}/>
         <FakeLorem clss={"fake3"}/>
       </div> */}
-      <FakeLorem clss={"fake1"}/>
     </div>
   );
 }

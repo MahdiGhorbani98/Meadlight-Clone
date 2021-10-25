@@ -1,11 +1,11 @@
-import React,{useEffect, useRef} from 'react'
+import React,{useEffect} from 'react'
 import SvgImport from '../SVG/SvgImport';
 import rose from '../../Assets/illustrations/rose_00.png';
 import story_00 from '../../Assets/illustrations/story_00.png';
 import story_01 from '../../Assets/illustrations/story_01.png';
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { Power2 , Elastic } from 'gsap/all';
+import { Power2, Elastic } from 'gsap/all';
 export default function Section3_History() {
     gsap.registerPlugin(ScrollTrigger)
 
@@ -123,7 +123,8 @@ export default function Section3_History() {
             opacity:0,
             y:50,
             x:30,
-            duration:0.8,
+            duration:1.8,
+            ease: Elastic.easeOut.config(1.2, 0.75)
         },'-=0.0')
 
     })

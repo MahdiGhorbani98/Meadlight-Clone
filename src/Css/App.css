@@ -5,6 +5,8 @@
 @import url('./Section1_Intro.css');
 @import url('./Section2_PinkDrink.css');
 @import url('./Section3_History.css');
+@import url('./Section4_Cocktails.css');
+@import url('./Section5_Contacts.css');
 
 *{
   box-sizing: border-box;
@@ -12,7 +14,9 @@
   padding: 0;
 }
 
-
+body::-webkit-scrollbar {
+  display: none;
+}
 
 body{
   font-family: 'Candela Book', sans-serif;
@@ -24,7 +28,7 @@ body{
   width: 90px;
   position: fixed;
   top: 40px;
-  left: 100px;
+  left: 6%;
 }
 .div__spinner{
   position: fixed;

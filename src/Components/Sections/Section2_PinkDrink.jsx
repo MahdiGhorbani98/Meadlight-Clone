@@ -4,7 +4,7 @@ import hand00 from '../../Assets/illustrations/hand_00.png';
 import SvgImport from '../SVG/SvgImport';
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { Power2 , Elastic } from 'gsap/all';
+import { Power2  } from 'gsap/all';
 
 
 export default function Section2_PinkDrink() {
