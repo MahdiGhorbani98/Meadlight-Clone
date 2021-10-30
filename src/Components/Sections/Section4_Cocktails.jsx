@@ -81,9 +81,9 @@ export default function Section4_Cocktails() {
             trigger:".Section4_Cocktails",
             // toggleActions: "play pause resume reset",
             start: "+=3100",
-            end:"+=450",
-            markers:true,
-            scrub:1,
+            end:"+=650",
+            markers:false,
+            scrub:2,
             onLeave: scrTrigger => scrTrigger.kill(false,true)
         },
     },false)
@@ -350,7 +350,7 @@ export default function Section4_Cocktails() {
 
             <div className="defaultImgs">
                 <div className="img_red_04">
-                <img className="red_04" src={red_04} alt="red_04" />  
+                <img id="Section4" className="red_04" src={red_04} alt="red_04" />  
                 </div>
 
                 <div className="img_ghiaccio_00">

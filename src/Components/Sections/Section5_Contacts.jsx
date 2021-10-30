@@ -6,6 +6,8 @@ import ln from '../../Assets/images/in.png';
 import g from '../../Assets/images/Git.png';
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { Power2 } from 'gsap/all';
+
 // import { Power2 , Elastic } from 'gsap/all';
 export default function Section5_Contacts() {
     let tl_info = gsap.timeline()
@@ -24,123 +26,70 @@ export default function Section5_Contacts() {
     gsap.registerPlugin(ScrollTrigger)
 
 
-    let tl_02 = gsap.timeline({
+    let tl = gsap.timeline({
         scrollTrigger:{
             trigger:".Section5_Contacts",
-            start: "+=1650",
-            markers:false,
+            start: "+=4550"
         },
     })
-    let tl_articles = gsap.timeline({
-        scrollTrigger:{
-            trigger:".Section5_Contacts",
-            start: "+=1770",
-            markers:false,
-        },
+
+    useEffect(() => {
+        gsap.from('.roseS5',
+        {
+            scrollTrigger:{
+                trigger:".Section5_Contacts",
+                start: "-=300"
+            },
+            opacity:0,
+            y:20,
+            duration:0.6
+        })
+
+        gsap.from('.hand_01',
+        {
+            scrollTrigger:{
+                trigger:".Section5_Contacts",
+                start: "-=300",
+            },
+            y:40,
+            opacity:0,
+            duration:0.6
+        })
+
+        tl.from('.pBold__s5',
+        {
+            rotateX:-50,
+            rotateY:-50,
+            opacity:0,
+            x:30,
+            duration:0.8
+        })
+        tl.from('.linePink_pBold_S5',
+        {
+            strokeDashoffset:650,
+            duration:0.8,
+            ease: Power2.easeIn
+        },'-=0.3')
+
+        tl.from('.pHeader__s5',
+        {
+            y:30,
+            opacity:0,
+            duration:0.5
+        })
+
+        tl.from('.pCaption__s5',
+        {
+            rotateX:-50,
+            rotateY:-50,
+            opacity:0,
+            x:20,
+            duration:0.6,
+            stagger:1
+        },'-=0.3')
+
+
     })
-    // useEffect(() => {
-    //     gsap.from('.roseS3',
-    //     {
-    //         scrollTrigger:{
-    //             trigger:".Section3_History_Container",
-    //             start: "-=550",
-    //             markers:false,
-    //         },
-    //         opacity:0,
-    //         y:20,
-    //         duration:0.5
-    //     })
-    //     gsap.from('.story_00',
-    //     {
-    //         scrollTrigger:{
-    //             trigger:".Section3_History_Container",
-    //             start: "-=550",
-    //             markers:false,
-    //         },
-    //         opacity:0,
-    //         y:30,
-    //         duration:0.5
-    //     })
-    //     tl_02.from('.zeroS3',
-    //     {
-    //         rotateX:-50,
-    //         rotateY:-50,
-    //         opacity:0,
-    //         duration:0.4
-    //     })
-    //     tl_02.from('.oneS3',
-    //     {
-    //         rotateX:-50,
-    //         rotateY:-50,
-    //         opacity:0,
-    //         duration:0.4
-    //     },"-=0.2")
-    //     // tl_01.from('.hand00',
-    //     // {
-    //     //     y:40,
-    //     //     opacity:0,
-    //     //     duration:0.4
-    //     // },"-=0.4")
-    //     tl_02.from('.svg__02',
-    //     {
-    //         strokeDashoffset:355.611,
-    //         duration:0.4
-    //     },"-=0.1")
-    //     gsap.from('.pHeader__s3',
-    //     {
-    //         scrollTrigger:{
-    //             trigger:".Section3_History_Container",
-    //             start: "-=450",
-    //             markers:false,
-    //         },
-    //         y:30,
-    //         opacity:0,
-    //         duration:0.5
-    //     })
-    //     // gsap.from('.svg_nextInfo',
-    //     // {
-
-    //     //     strokeDashoffset:330,
-    //     //     duration:0.5
-    //     // })
-
-    //     tl_articles.from('.pBold__s3',
-    //     {
-    //         rotateX:-50,
-    //         rotateY:-50,
-    //         opacity:0,
-    //         x:30,
-    //         duration:0.8
-    //     },"-=0.2")
-    //     tl_articles.from('.linePink_pBold_S3',
-    //     {
-    //         strokeDashoffset:650,
-    //         duration:0.8,
-    //         ease: Power2.easeIn
-    //     },'-=0.3')
-    //     tl_articles.from('.pCaption__s3',
-    //     {
-    //         rotateX:-50,
-    //         rotateY:-50,
-    //         opacity:0,
-    //         x:20,
-    //         duration:0.6,
-    //         stagger:1
-    //     },'-=0.3')
-    //     gsap.from('.story_01',
-    //     {
-    //         scrollTrigger:{
-    //             trigger:".Section3_History_Container",
-    //             start: "-=290",
-    //             markers:false,
-    //         },
-    //         opacity:0,
-    //         y:50,
-    //         x:30,
-    //         duration:0.8,
-    //     },'-=0.0')
-
-    // })
 
 
 
@@ -148,7 +97,7 @@ export default function Section5_Contacts() {
         <div className="Section5_Contacts_Container">
             <div className="Section5_Contacts">
                 <div>
-                    <img className="roseS5" src={rose} alt="rose" />
+                    <img id="Section5" className="roseS5" src={rose} alt="rose" />
                     
                     <p className="pHeader__s5">NICE TO MEET YOU</p>
                     <div className="articles_S5">
@@ -193,6 +142,7 @@ export default function Section5_Contacts() {
                     </div>
                 
                 </div>
+
             </div>
         </div>
     )

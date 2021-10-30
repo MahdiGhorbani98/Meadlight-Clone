@@ -13,6 +13,7 @@ import p from '../Assets/images/P.png'
 import {ReactComponent as Spinner} from '../Assets/vectors/spinner.svg'
 import Section5_Contacts from './Sections/Section5_Contacts';
 import Section4_Cocktails from './Sections/Section4_Cocktails';
+import Header from './Sections/Header';
 
 function App() {
   gsap.registerPlugin(ScrollTrigger)
@@ -74,14 +75,15 @@ function App() {
   
 
   return (
-    <div className="App">
+    <div id="Section1" className="App">
       <img src={plus} alt="plus" className="plus" />
       {/* <CanvasController/> */}
       <Section1_Intro/> 
       <Section2_PinkDrink/>
       <Section3_History/> 
       <Section4_Cocktails/>
-      {/* <Section5_Contacts/> */}
+      <Section5_Contacts/>
+      <Header/>
       <div className="div__spinner">
         <Spinner width={100} className="spinner"/>
         <img src={p} alt="" className="p_in_spinner" />

@@ -361,9 +361,9 @@ export default function Section2_PinkDrink() {
     })
 
     return (
-        <div className="Section2_PinkDrink_Container">
+        <div  className="Section2_PinkDrink_Container">
             <div className="Section2_PinkDrink">
-                <img className="rose" src={rose} alt="rose" />
+                <img id="Section2" className="rose" src={rose} alt="rose" />
                 <div className="Container_01">
                     <div className="div__01">
                     <h2 className="zeroS2">0</h2>

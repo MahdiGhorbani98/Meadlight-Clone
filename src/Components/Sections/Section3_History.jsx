@@ -136,7 +136,7 @@ export default function Section3_History() {
             <img className="story_00" src={story_00} alt="story_00" />  
             <div className="Section3_History">
                 <div>
-                    <img className="roseS3" src={rose} alt="rose" />
+                    <img id="Section3" className="roseS3" src={rose} alt="rose" />
                     <div className="Container_01_S3">
                         <div className="div__01_S3">
                         <h2 className="zeroS3">0</h2>

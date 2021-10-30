@@ -7,11 +7,15 @@
 @import url('./Section3_History.css');
 @import url('./Section4_Cocktails.css');
 @import url('./Section5_Contacts.css');
+@import url('./Header.css');
 
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
