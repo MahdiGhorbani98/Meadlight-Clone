@@ -16,7 +16,7 @@ export default function MeadlightBottle(props) {
           trigger: '.App',
           start: "top top", // when the top of the trigger hits the top of the viewport
           end: "+=5930",
-          scrub:1
+          scrub:1.6
         }
       }
     );
@@ -29,7 +29,7 @@ export default function MeadlightBottle(props) {
           start: "+=0",
           end:"+=800", // when the top of the trigger hits the top of the viewport
           // markers:true,
-          scrub:1
+          scrub:1.6
         }
       },
       {
@@ -39,7 +39,7 @@ export default function MeadlightBottle(props) {
           end:"+=800", // when the top of the trigger hits the top of the viewport
 
           // start: "bottom top", // when the top of the trigger hits the top of the viewport
-          scrub:1,
+          scrub:1.6,
         },
         duration:3
       }

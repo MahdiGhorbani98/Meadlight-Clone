@@ -4,6 +4,48 @@ import { Power2 } from 'gsap/all';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 export default function Header() {
+    //////////////////Function Scroll/////////////////////////
+    function Scroll_To_Section1(){
+        console.log("diccover");
+        window.scroll({ 
+          top: 0, // could be negative value
+          left: 0, 
+          behavior: 'smooth' 
+        });
+    }
+    function Scroll_To_Section2(){
+        console.log("diccover");
+        window.scroll({ 
+          top: 850, // could be negative value
+          left: 0, 
+          behavior: 'smooth' 
+        });
+    }
+    function Scroll_To_Section3(){
+        console.log("diccover");
+        window.scroll({ 
+          top: 1850, // could be negative value
+          left: 0, 
+          behavior: 'smooth' 
+        });
+    }
+    function Scroll_To_Section4(){
+        console.log("diccover");
+        window.scroll({ 
+          top: 3150, // could be negative value
+          left: 0, 
+          behavior: 'smooth' 
+        });
+    }
+    function Scroll_To_Section5(){
+        console.log("diccover");
+        window.scroll({ 
+          top: 4600, // could be negative value
+          left: 0, 
+          behavior: 'smooth' 
+        });
+    }
+    ///////////////////////////////////////////
     gsap.registerPlugin(ScrollTrigger)
 
     function ShowHeader(){
@@ -70,7 +112,7 @@ export default function Header() {
             trigger:'.Section5_Contacts_Container',
             start: "+=4300",
             end:"+=10",
-            markers:true,
+            markers:false,
             scrub:0.5,
             // ease:"none"
             // toggleActions: 'play reverse none reverse'
@@ -120,7 +162,7 @@ export default function Header() {
         <header>
             <div className="header_Container" onMouseEnter={()=>ShowHeader()} onMouseLeave={()=>HideHeader()}>
 
-                <a href="#Section1" className="btnHeader btnHeader1" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header1",".title_90deg__Intro")} onMouseLeave={()=>UnHoverCircles(".svg__fillCircle_Header1",".title_90deg__Intro")}>
+                <a onClick={()=>Scroll_To_Section1()} className="btnHeader btnHeader1" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header1",".title_90deg__Intro")} onMouseLeave={()=>UnHoverCircles(".svg__fillCircle_Header1",".title_90deg__Intro")}>
                     <p className="title_90deg title_90deg__Intro">Intro</p>
                     <div className="btn__Header btn_Header_I clicked__Header">
                         <svg  style={{width:"10px"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9">
@@ -130,7 +172,7 @@ export default function Header() {
                     </div>
                 </a>
 
-                <a href="#Section2" className="btnHeader btnHeader2" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header2",".title_90deg__PinkDrink")} onMouseLeave={()=>UnHoverCircles(".svg__fillCircle_Header2",".title_90deg__PinkDrink")} >
+                <a onClick={()=>Scroll_To_Section2()}  className="btnHeader btnHeader2" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header2",".title_90deg__PinkDrink")} onMouseLeave={()=>UnHoverCircles(".svg__fillCircle_Header2",".title_90deg__PinkDrink")} >
                     <p className="title_90deg  title_90deg__PinkDrink ">PinkDrink</p>
                     <div className="btn__Header btn_Header_I clicked__Header">
                         <svg  style={{width:"10px"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9">
@@ -140,7 +182,7 @@ export default function Header() {
                     </div>
                 </a>
 
-                <a href="#Section3" className="btnHeader btnHeader3" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header3",".title_90deg__History")} onMouseLeave={()=>UnHoverCircles(".svg__fillCircle_Header3",".title_90deg__History")}>
+                <a onClick={()=>Scroll_To_Section3()}  className="btnHeader btnHeader3" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header3",".title_90deg__History")} onMouseLeave={()=>UnHoverCircles(".svg__fillCircle_Header3",".title_90deg__History")}>
                     <p className="title_90deg title_90deg__History">History</p>
                     <div  className="btn__Header btn_Header_I clicked__Header">
                         <svg  style={{width:"10px"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9">
@@ -150,7 +192,7 @@ export default function Header() {
                     </div>
                 </a>
 
-                <a href="#Section4" className="btnHeader btnHeader4" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header4",".title_90deg__Cocktails")} onMouseLeave={()=>UnHoverCircles(".svg__fillCircle_Header4",".title_90deg__Cocktails")}>
+                <a onClick={()=>Scroll_To_Section4()} className="btnHeader btnHeader4" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header4",".title_90deg__Cocktails")} onMouseLeave={()=>UnHoverCircles(".svg__fillCircle_Header4",".title_90deg__Cocktails")}>
                     <p className="title_90deg title_90deg__Cocktails">Cocktails</p>
                     <div className="btn__Header btn_Header_I clicked__Header">
                         <svg  style={{width:"10px"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9">
@@ -160,7 +202,7 @@ export default function Header() {
                     </div>
                 </a>
 
-                <a href="#Section5" className="btnHeader btnHeader5" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header5",".title_90deg__Contacts")} onMouseLeave={()=>UnHoverCircles(".svg__fillCircle_Header5",".title_90deg__Contacts")}>
+                <a onClick={()=>Scroll_To_Section5()} className="btnHeader btnHeader5" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header5",".title_90deg__Contacts")} onMouseLeave={()=>UnHoverCircles(".svg__fillCircle_Header5",".title_90deg__Contacts")}>
                     <p className="title_90deg title_90deg__Contacts">Contacts</p>
                     <div  className="btn__Header btn_Header_I clicked__Header">
                         <svg  style={{width:"10px"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9">

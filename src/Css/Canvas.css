@@ -1,4 +1,5 @@
 .canvas{
+    pointer-events: none;
     display: none;
     position: fixed;
     height: 95%;

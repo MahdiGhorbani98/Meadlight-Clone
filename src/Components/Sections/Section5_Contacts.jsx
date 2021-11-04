@@ -126,13 +126,13 @@ export default function Section5_Contacts() {
                             <p>NAME</p>
                             <p>MAHDI GHORBANI</p>
                         </div>
-                        <div className="email">
+                        <a href="mailto:mahdig502@gmail.com" target="_blank" className="email">
                             <p>EMAIL</p>
                             <p>MAHDIG502@GMAIL.COM</p>
-                        </div>
+                        </a>
                         <div className="socials">
-                            <img src={ln} className="linkedin" alt="linkedin" />
-                            <img src={g} className="git" alt="git" />
+                            <a href="https://www.linkedin.com/in/mahdi-ghorbani-33299b138/" target="_blank"><img src={ln} className="linkedin" alt="linkedin" /></a>
+                            <a href="https://github.com/MahdiGhorbani98" target="_blank"><img src={g} className="git" alt="git" /></a> 
 
                         </div>
                     </div>

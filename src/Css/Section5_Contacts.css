@@ -76,7 +76,17 @@
 }
 .email{
     line-height: 2.5;
+    color: #7a7a7c;
+    text-decoration: none;
 }
+.linkedin{
+    color: #7a7a7c;
+    text-decoration: none;
+
+}
+/* .email a {
+    text-decoration: none;
+} */
 
 .pureInfo{
     background-color: transparent;
