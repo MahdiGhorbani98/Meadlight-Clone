@@ -40,7 +40,6 @@
 
 
 .title_90deg__Intro{
-
 }
 .title_90deg__PinkDrink{
     top: -22px !important;
@@ -56,6 +55,23 @@
 .title_90deg__Contacts{
     top: -22px !important;
     opacity: 0;
+}
+
+
+.btnHeader1{
+    cursor:default;
+}
+.btnHeader2{
+    cursor: pointer;
+}
+.btnHeader3{
+    cursor: pointer;
+}
+.btnHeader4{
+    cursor: pointer;
+}
+.btnHeader5{
+    cursor: pointer;
 }
 
 

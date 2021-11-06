@@ -21,53 +21,75 @@ export default function MeadlightBottle(props) {
       }
     );
   
+
   tl.fromTo('.canvas' , 
       {
         x:0,
         scrollTrigger:{
           trigger: '.roseS3',
-          start: "+=0",
-          end:"+=800", // when the top of the trigger hits the top of the viewport
-          // markers:true,
-          scrub:1.6
+          // start: "+=0",
+          // end:"+=800", // when the top of the trigger hits the top of the viewport
+          markers:false,
+          scrub:1
         }
       },
       {
         x:-900,
         scrollTrigger:{
           trigger: '.roseS3',
-          end:"+=800", // when the top of the trigger hits the top of the viewport
-
+          // end:"+=800", // when the top of the trigger hits the top of the viewport
           // start: "bottom top", // when the top of the trigger hits the top of the viewport
-          scrub:1.6,
-        },
-        duration:3
+          scrub:1
+        }
       }
     )
-  // .fromTo('.canvas' , 
-  //     {
-  //       x:-900,
-  //       scrollTrigger:{
-  //         trigger: '.fakrLorem',
-  //         start: "+=800",
-  //         // end:"+=800", // when the top of the trigger hits the top of the viewport
-  //         // markers:true,
-  //         scrub:1
-  //       }
-  //     },
-  //     {
-  //       x:0,
-  //       scrollTrigger:{
-  //         trigger: '.fakrLorem',
-  //         // end:"+=800", // when the top of the trigger hits the top of the viewport
+  tl.fromTo('.canvas' , 
+    {
+      scrollTrigger:{
+        trigger: '.imgs_Spritzlight',
+        start: "-=300",
+        // end:"+=800", // when the top of the trigger hits the top of the viewport
+        markers:false,
+        scrub:1
+      },
+      x:-900
+    },
+    {
+      scrollTrigger:{
+        trigger: '.imgs_Spritzlight',
+        // end:"+=800", // when the top of the trigger hits the top of the viewport
+        
+        // start: "bottom top", // when the top of the trigger hits the top of the viewport
+        scrub:1
+      },
+      x:150
+    }
+  );
+  tl.fromTo('.canvas' , 
+    {
+      scrollTrigger:{
+        trigger: '.Section5_Contacts_Container',
+        // start: "-=300",
+        end:"+=100", // when the top of the trigger hits the top of the viewport
+        markers:false,
+        scrub:1
+      },
+      x:150
+    },
+    {
+      scrollTrigger:{
+        trigger: '.Section5_Contacts_Container',
+        scrub:1
+      },
+      x:-50,
+      marginTop:-350
+    }
+  );
 
-  //         // start: "bottom top", // when the top of the trigger hits the top of the viewport
-  //         scrub:1,
-  //       },
-  //       duration:3
-  //     }
-  //   );
+
+
   },[])
+
 
 
   useEffect(() => {

@@ -81,12 +81,14 @@ export default function Section4_Cocktails() {
             trigger:".Section4_Cocktails",
             // toggleActions: "play pause resume reset",
             start: "+=3100",
-            end:"+=650",
+            end:"+=350",
             markers:false,
             scrub:2,
-            onLeave: scrTrigger => scrTrigger.kill(false,true)
-        },
+            // onLeave: scrTrigger => scrTrigger.kill(false,true)
+    },
     },false)
+
+
     let tl_05 = gsap.timeline({
         scrollTrigger:{
             trigger:".Section4_Cocktails",

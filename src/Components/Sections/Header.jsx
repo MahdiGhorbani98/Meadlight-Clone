@@ -50,8 +50,23 @@ export default function Header() {
 
     function ShowHeader(){
         gsap.fromTo('.header_Container',{opacity:0},{opacity:1, duration:0})
+
         gsap.fromTo('.btnHeader',{opacity:0 , x:25},{opacity:1,x:0,stagger:0.1,ease: Power2.easeInOut, duration:0.5})
 
+        // document.querySelector('.btnHeader1').style.cursor ="default"
+
+        let btnHeader_array =["btnHeader1","btnHeader2","btnHeader3","btnHeader4","btnHeader5"]
+        document.querySelector('.btnHeader1').style.cursor="default"
+        let btnHeader_array_to_loop = btnHeader_array.filter(i=> document.querySelector(`.${i}`).style.cursor !== "default")
+        
+        for (let i = 0; i < btnHeader_array_to_loop.length; i++) {
+          gsap.set(`.${btnHeader_array_to_loop[i]} .title_90deg` ,{
+              opacity:0
+          }) 
+          gsap.set(`.${btnHeader_array_to_loop[i]} .svg__fillCircle_Header` ,{
+              r:0
+          }) 
+        }
     }
 
     function HideHeader(){
@@ -60,20 +75,19 @@ export default function Header() {
 
     function HoverCircles(item,itme_title90deg){
         
-        // for (let i = 0; i < 5; i++) {
-        //     console.log(document.querySelector(`.svg__fillCircle_Header${i+1}`).style.r);
-        //     if(document.querySelector(`.svg__fillCircle_Header${i+1}`).style.r !== "4px")    {
-        //     }   
-        // }    
         gsap.fromTo(item,{r:0},{r:2, duration:0.4})
         gsap.fromTo(itme_title90deg,{x:10,opacity:0},{x:0,opacity:1, duration:0.5})
 
     }
 
-    function UnHoverCircles(item,itme_title90deg){
-        gsap.fromTo(item,{r:2},{r:0, duration:0.4})
-        gsap.fromTo(itme_title90deg,{x:0,opacity:1},{x:10,opacity:0, duration:0.5})
+    function UnHoverCircles(btnHeader,item,itme_title90deg){
+        if(document.querySelector(btnHeader).style.pointerEvents!=="none"){
+            gsap.fromTo(item,{r:2},{r:0, duration:0.4})
+            gsap.fromTo(itme_title90deg,{x:0,opacity:1},{x:10,opacity:0, duration:0.5})
+        }
+
     }
+
     let tl_S1 = gsap.timeline({
         scrollTrigger:{
             trigger:'.Section2_PinkDrink_Container',
@@ -162,7 +176,7 @@ export default function Header() {
         <header>
             <div className="header_Container" onMouseEnter={()=>ShowHeader()} onMouseLeave={()=>HideHeader()}>
 
-                <a onClick={()=>Scroll_To_Section1()} className="btnHeader btnHeader1" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header1",".title_90deg__Intro")} onMouseLeave={()=>UnHoverCircles(".svg__fillCircle_Header1",".title_90deg__Intro")}>
+                <a onClick={()=>Scroll_To_Section1()} className="btnHeader btnHeader1" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header1",".title_90deg__Intro")} onMouseLeave={()=>UnHoverCircles(".btnHeader1",".svg__fillCircle_Header1",".title_90deg__Intro")}>
                     <p className="title_90deg title_90deg__Intro">Intro</p>
                     <div className="btn__Header btn_Header_I clicked__Header">
                         <svg  style={{width:"10px"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9">
@@ -172,7 +186,7 @@ export default function Header() {
                     </div>
                 </a>
 
-                <a onClick={()=>Scroll_To_Section2()}  className="btnHeader btnHeader2" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header2",".title_90deg__PinkDrink")} onMouseLeave={()=>UnHoverCircles(".svg__fillCircle_Header2",".title_90deg__PinkDrink")} >
+                <a onClick={()=>Scroll_To_Section2()}  className="btnHeader btnHeader2" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header2",".title_90deg__PinkDrink")} onMouseLeave={()=>UnHoverCircles(".btnHeader2",".svg__fillCircle_Header2",".title_90deg__PinkDrink")} >
                     <p className="title_90deg  title_90deg__PinkDrink ">PinkDrink</p>
                     <div className="btn__Header btn_Header_I clicked__Header">
                         <svg  style={{width:"10px"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9">
@@ -182,7 +196,7 @@ export default function Header() {
                     </div>
                 </a>
 
-                <a onClick={()=>Scroll_To_Section3()}  className="btnHeader btnHeader3" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header3",".title_90deg__History")} onMouseLeave={()=>UnHoverCircles(".svg__fillCircle_Header3",".title_90deg__History")}>
+                <a onClick={()=>Scroll_To_Section3()}  className="btnHeader btnHeader3" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header3",".title_90deg__History")} onMouseLeave={()=>UnHoverCircles(".btnHeader3",".svg__fillCircle_Header3",".title_90deg__History")}>
                     <p className="title_90deg title_90deg__History">History</p>
                     <div  className="btn__Header btn_Header_I clicked__Header">
                         <svg  style={{width:"10px"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9">
@@ -192,7 +206,7 @@ export default function Header() {
                     </div>
                 </a>
 
-                <a onClick={()=>Scroll_To_Section4()} className="btnHeader btnHeader4" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header4",".title_90deg__Cocktails")} onMouseLeave={()=>UnHoverCircles(".svg__fillCircle_Header4",".title_90deg__Cocktails")}>
+                <a onClick={()=>Scroll_To_Section4()} className="btnHeader btnHeader4" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header4",".title_90deg__Cocktails")} onMouseLeave={()=>UnHoverCircles(".btnHeader4",".svg__fillCircle_Header4",".title_90deg__Cocktails")}>
                     <p className="title_90deg title_90deg__Cocktails">Cocktails</p>
                     <div className="btn__Header btn_Header_I clicked__Header">
                         <svg  style={{width:"10px"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9">
@@ -202,7 +216,7 @@ export default function Header() {
                     </div>
                 </a>
 
-                <a onClick={()=>Scroll_To_Section5()} className="btnHeader btnHeader5" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header5",".title_90deg__Contacts")} onMouseLeave={()=>UnHoverCircles(".svg__fillCircle_Header5",".title_90deg__Contacts")}>
+                <a onClick={()=>Scroll_To_Section5()} className="btnHeader btnHeader5" onMouseEnter={()=>HoverCircles(".svg__fillCircle_Header5",".title_90deg__Contacts")} onMouseLeave={()=>UnHoverCircles(".btnHeader5",".svg__fillCircle_Header5",".title_90deg__Contacts")}>
                     <p className="title_90deg title_90deg__Contacts">Contacts</p>
                     <div  className="btn__Header btn_Header_I clicked__Header">
                         <svg  style={{width:"10px"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9">
